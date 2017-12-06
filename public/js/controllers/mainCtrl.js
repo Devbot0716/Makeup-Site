@@ -1,4 +1,4 @@
 angular.module('app')
-  .controller('mainCtrl', ($scope, mainSvc)=>{
-    
+  .controller('mainCtrl', function($scope, mainSvc){
+
   })

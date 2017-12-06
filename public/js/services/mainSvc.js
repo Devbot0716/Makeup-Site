@@ -1,5 +1,5 @@
 angular.module('app')
-  .service('mainSvc', ($http)=>{
+  .service('mainSvc', function($http){
 
     const localhost = 'http://localhost:3000';
 

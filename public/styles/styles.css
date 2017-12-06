@@ -1,0 +1,179 @@
+/*HEADER.HTML*/
+body {
+  margin: 0;
+  /*background: #222;*/
+  font-family: sans-serif;
+  font-weight: 400;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+header {
+  background: #E6C9BF;
+}
+
+header::after{
+  content: '';
+  display: table;
+  clear: both;
+}
+
+h4 { /*logo*/
+  float: left;
+  padding: 10px 5px;
+  border: 1px solid black;
+  color: white
+}
+
+nav {
+  float: right;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  text-align: center;
+}
+
+nav li {
+  display: inline-block;
+  margin-left: 70px;
+  padding-top: 23px;
+  position: relative;
+}
+
+nav a {
+  color: #444;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: #000;
+}
+
+nav a::before {
+  content: '';
+  display: block;
+  height: 5px;
+  width: 0%;
+  background-color: #444;
+  position: absolute;
+  top: 0;
+  transition: all ease-in-out 350ms;
+}
+
+nav a:hover::before {
+  width: 100%;
+}
+
+/*HOME.HTML*/
+
+.home_container {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  /* You can set flex-wrap and flex-direction individually */
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  /* Or do it all in one line with flex flow */
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  /* tweak the where items line up on the row */
+  /* valid values are: flex-start, flex-end, space-between, space-around, stretch */
+  -webkit-align-content: flex-end;
+  align-content: flex-end;
+
+  border: 2px dotted black;
+
+
+}
+
+.home_container div {
+  border: 1px dotted gray;
+  padding: 45px;
+  font-size: 60px;
+}
+
+/*FOOTER.HTML*/
+footer {
+  width: 100%;
+  height: 400px;
+  margin-top: 500px;
+  /*border: 2px dotted blue;*/
+  background-color: #E6C9BF;
+}
+
+#foot {
+  width: 1000px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+h3 {
+  color: #ffffff;
+}
+
+div.social {
+  float: left;
+  margin-top: 20px;
+}
+
+a.social {
+  margin-right: 15px;
+
+  text-decoration: none;
+}
+
+div.contact {
+  float: right;
+  margin-right: 200px;
+  margin-top: 20px;
+}
+
+footer img {
+  width: 60px;
+  height: 60px;
+}
+
+label {
+  color: black;
+}
+
+input.text {
+  height: 20px;
+  width: 250px;
+  border-radius: 3px;
+  border: none;
+}
+
+textarea.message {
+  height: 100px;
+  width: 250px;
+  border-radius: 3px;
+  border: none;
+}
+
+input.submit {
+  width: 60px;
+  height: 25px;
+  background-color: #ffffff;
+  color: black;
+  border: none;
+  border-radius: 3px;
+}
+
+input.submit:hover {
+  text-decoration: underline;
+}
