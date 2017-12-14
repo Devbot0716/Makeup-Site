@@ -1,4 +1,9 @@
 /*HEADER.HTML*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   margin: 0;
   /*background: #222;*/
@@ -12,7 +17,13 @@ body {
 }
 
 header {
-  background: #E6C9BF;
+  background: white;
+  border-radius: 5px;
+  border: 1px solid gray;
+  margin: 5px;
+  box-shadow: 3px 3px 3px #999;
+     -moz-box-shadow: 3px 3px 3px #999;
+     -webkit-box-shadow: 3px 3px 3px #999;
 }
 
 header::after{
@@ -21,20 +32,22 @@ header::after{
   clear: both;
 }
 
-h4 { /*logo*/
+.logo{ /*logo*/
   float: left;
-  padding: 10px 5px;
-  border: 1px solid black;
-  color: white
+  /*border: 1px dotted black;*/
+  width: 200px;
+  length: 200px;
+  background-color: white;
+  margin: 8px;
 }
 
 nav {
-  float: right;
+  /*float: right;*/
 }
 
 nav ul {
   margin: 0;
-  padding: 0;
+  padding: 75px;
   list-style: none;
   overflow: hidden;
   text-align: center;
@@ -42,8 +55,8 @@ nav ul {
 
 nav li {
   display: inline-block;
-  margin-left: 70px;
-  padding-top: 23px;
+  margin-left: 60px;
+  padding-top: 20px;
   position: relative;
 }
 
@@ -75,79 +88,125 @@ nav a:hover::before {
 
 /*HOME.HTML*/
 
-.home_container {
-  display: -webkit-flex;
+div.home_container {
   display: flex;
-  -webkit-align-items: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  /* You can set flex-wrap and flex-direction individually */
-  -webkit-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex-wrap: wrap;
   flex-wrap: wrap;
-  /* Or do it all in one line with flex flow */
-  -webkit-flex-flow: row wrap;
-  flex-flow: row wrap;
-  /* tweak the where items line up on the row */
-  /* valid values are: flex-start, flex-end, space-between, space-around, stretch */
-  -webkit-align-content: flex-end;
-  align-content: flex-end;
-
-  border: 2px dotted black;
-
-
+  align-content: center;
+  justify-content: center;
 }
 
-.home_container div {
-  border: 1px dotted gray;
-  padding: 45px;
-  font-size: 60px;
+div.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  width: 1000px;
+}
+
+img.portfolio {
+  width: 530px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+img.makeup_brushes {
+  width: 350px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+img.bookwithme {
+  width: 350px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+
+img.services_and_pricing {
+  width: 530px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
 }
 
 /*FOOTER.HTML*/
 footer {
   width: 100%;
-  height: 400px;
+  height: 240px;;
   margin-top: 500px;
-  /*border: 2px dotted blue;*/
-  background-color: #E6C9BF;
+  border: 5px solid #E6C9BF;
+  border-radius: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 5px;
 }
 
 #foot {
   width: 1000px;
   height: 100%;
   margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 h3 {
-  color: #ffffff;
+  color: black;
 }
 
 div.social {
-  float: left;
+
   margin-top: 20px;
+  margin-left: 30px;
+  text-decoration: none;
 }
 
 a.social {
   margin-right: 15px;
+  text-decoration: none;/*gets rid of those annoying underscores next to social media links*/
+}
 
-  text-decoration: none;
+span {
+  font-size: 50px;
+  padding: 20px;
 }
 
 div.contact {
-  float: right;
-  margin-right: 200px;
+  padding-right: 30px;
   margin-top: 20px;
+  color: black;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  padding-left: 140px;
 }
 
-footer img {
+h2#phone_no {
+  margin: 10px;
+  font-family: monospace;
+}
+
+h2#email {
+  margin: 10px;
+  font-family: monospace;
+}
+
+img.pinterest {
   width: 60px;
   height: 60px;
 }
+img.facebook {
+  width: 75px;
+  height: 60px;
+}
+img.instagram {
+  width: 65px;
+  height: 65px;
+}
 
-label {
+/*label {
   color: black;
 }
 
@@ -176,4 +235,4 @@ input.submit {
 
 input.submit:hover {
   text-decoration: underline;
-}
+}*/
