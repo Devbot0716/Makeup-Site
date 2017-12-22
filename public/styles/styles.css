@@ -6,9 +6,12 @@
 
 body {
   margin: 0;
-  /*background: #222;*/
   font-family: sans-serif;
   font-weight: 400;
+/* width: 100%;
+  height: 100%;
+  min-width: 1000px;
+  min-height: 1000px; */
 }
 
 .container {
@@ -32,9 +35,9 @@ header::after{
   clear: both;
 }
 
-.logo{ /*logo*/
+.logo{
   float: left;
-  /*border: 1px dotted black;*/
+  border: 1px solid #D8D8D8;
   width: 200px;
   length: 200px;
   background-color: white;
@@ -93,6 +96,7 @@ div.home_container {
   flex-wrap: wrap;
   align-content: center;
   justify-content: center;
+
 }
 
 div.boxes {
@@ -135,7 +139,7 @@ img.services_and_pricing {
 footer {
   width: 100%;
   height: 240px;;
-  margin-top: 500px;
+  margin-top: 100px;
   border: 5px solid #E6C9BF;
   border-radius: 5px;
   margin-left: 5px;
@@ -144,7 +148,7 @@ footer {
 }
 
 #foot {
-  width: 1000px;
+  width: 80%;
   height: 100%;
   margin: 0 auto;
   display: flex;
@@ -157,9 +161,6 @@ h3 {
 }
 
 div.social {
-
-  margin-top: 20px;
-  margin-left: 30px;
   text-decoration: none;
 }
 
@@ -180,7 +181,7 @@ div.contact {
   display: flex;
   align-items: center;
   flex-direction: row;
-  padding-left: 140px;
+  padding-left: 30px;
 }
 
 h2#phone_no {
@@ -206,7 +207,95 @@ img.instagram {
   height: 65px;
 }
 
-/*label {
+/*CONTACT.HTML*/
+form.contact {
+  width: 270px;
+  heigh: 605px;
+}
+
+span.checkmark {
+  padding: 9px;
+}
+
+.checkbox_container {
+  display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.checkbox_container input {
+    position: absolute;
+    opacity: 0;
+}
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 5px;
+    width: 5px;
+    background-color: #eee;
+}
+.checkbox_container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+.checkbox_container input:checked ~ .checkmark {
+    background-color: #E6C9BF;
+}
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+.checkbox_container input:checked ~ .checkmark:after {
+    display: block;
+}
+.checkbox_container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.contact_container {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+}
+
+.columns {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  width: 1000px;
+}
+
+.left-column {
+  float: left;
+  border-right: 1px solid black;
+  padding: 30px;
+  margin: 10px;
+}
+
+.right-column {
+  float: right;
+  padding: 30px;
+  margin: 10px;
+}
+
+label {
   color: black;
 }
 
@@ -214,25 +303,44 @@ input.text {
   height: 20px;
   width: 250px;
   border-radius: 3px;
-  border: none;
+  border: 1px solid #d8d8d8;
 }
 
 textarea.message {
   height: 100px;
   width: 250px;
   border-radius: 3px;
-  border: none;
+  border: 1px solid #d8d8d8;
 }
 
 input.submit {
   width: 60px;
   height: 25px;
-  background-color: #ffffff;
+  background-color: white;
   color: black;
-  border: none;
-  border-radius: 3px;
+  border: 1px solid #E6C9BF;
+  border-radius: 6px;
+
+  transition: all 0.5s;
+  transition: 0.5s;
+}
+
+input.submit:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+input.submit:hover:after{
+  opacity: 1;
+  right: 0;
 }
 
 input.submit:hover {
-  text-decoration: underline;
-}*/
+  background-color: #E6C9BF;
+  color: white;
+  padding-left: 3px;
+}
