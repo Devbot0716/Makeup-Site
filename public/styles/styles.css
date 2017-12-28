@@ -14,19 +14,19 @@ body {
   min-height: 1000px; */
 }
 
-.container {
+.header_container {
   width: 80%;
   margin: 0 auto;
 }
 
 header {
   background: white;
-  border-radius: 5px;
-  border: 1px solid gray;
+  border-radius: 10px;
+  /* border-bottom: 1px solid gray; */
   margin: 5px;
-  box-shadow: 3px 3px 3px #999;
+  /* box-shadow: 3px 3px 3px #999;
      -moz-box-shadow: 3px 3px 3px #999;
-     -webkit-box-shadow: 3px 3px 3px #999;
+     -webkit-box-shadow: 3px 3px 3px #999; */
 }
 
 header::after{
@@ -37,15 +37,11 @@ header::after{
 
 .logo{
   float: left;
-  border: 1px solid #D8D8D8;
+  /* border: 1px solid #D8D8D8; */
   width: 200px;
   length: 200px;
   background-color: white;
   margin: 8px;
-}
-
-nav {
-  /*float: right;*/
 }
 
 nav ul {
@@ -54,6 +50,7 @@ nav ul {
   list-style: none;
   overflow: hidden;
   text-align: center;
+  font-family: 'Spectral SC', serif;
 }
 
 nav li {
@@ -169,7 +166,7 @@ a.social {
   text-decoration: none;/*gets rid of those annoying underscores next to social media links*/
 }
 
-span {
+span.doublebar {
   font-size: 50px;
   padding: 20px;
 }
@@ -205,6 +202,97 @@ img.facebook {
 img.instagram {
   width: 65px;
   height: 65px;
+}
+
+/*PRICING.HTML*/
+
+.boxes_and_text {
+  display: flex;
+  /* flex-wrap: wrap; */
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.price_image_box {
+  height: 200px;
+  width: 200px;
+  padding: 15px;
+  vertical-align: middle;
+}
+
+p.img_desc {
+  width:auto !important;
+  font-size: 23px;
+  display: inline-block;
+  margin: auto;
+  padding: 15px;
+
+}
+
+.whitetext{
+  color: white;
+}
+
+ul.columns-pricing {
+  list-style-type: none;
+}
+
+li..price_item1 {
+
+}
+
+li..price_item2 {
+
+}
+
+li..price_item3 {
+
+}
+
+li..price_item4 {
+
+}
+
+/*PORTFOLIO.HTML*/
+
+div.portfolio_container {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+}
+
+.makeup-box {
+  width: 350px;
+  height: 150px;
+  margin: 10px;
+  border: 1px dotted black;
+}
+
+.hair-box {
+  width: 350px;
+  height: 150px;
+  margin: 10px;
+  border: 1px dotted black;
+}
+
+.before-after-box {
+  width: 350px;
+  height: 150px;
+  margin: 10px;
+  border: 1px dotted black;
+}
+
+.brows-box {
+  width: 350px;
+  height: 150px;
+  margin: 10px;
+  border: 1px dotted black;
+}
+
+.questions-box{
+
 }
 
 /*CONTACT.HTML*/
