@@ -2,6 +2,7 @@
 * {
   margin: 0;
   padding: 0;
+  /* font-family: 'Julius Sans One', sans-serif; */
 }
 
 body {
@@ -51,6 +52,7 @@ nav ul {
   overflow: hidden;
   text-align: center;
   font-family: 'Spectral SC', serif;
+  /* font-family: 'Julius Sans One', sans-serif; */
 }
 
 nav li {
@@ -132,25 +134,76 @@ img.services_and_pricing {
   padding-bottom: 10px;
 }
 
+img.yulia_doing_makeup {
+  height: 400px;
+  width: 400px;
+  margin: 10px;
+  padding: 10px;
+}
+
+div.aboutme {
+  margin: 20px;
+  padding: 15px;
+  width: 1460px;
+}
+
+div.aboutme-box {
+  text-align: center;
+  padding: 10px;
+
+}
+
+h3 {
+  font-family: 'Julius Sans One', sans-serif;
+}
+
+.aboutme-title {
+  text-align: center;
+  border: solid #F5D6D3 3px;
+  padding: 15px;
+  background: #F5D6D3;
+  font-family: 'Codystar', cursive;
+  color: white;
+  font-size: 40px;
+}
+
+.aboutme-words {
+  padding: 10px;
+  margin: 10px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 20px;
+  color: gray;
+}
+
+.Yulia_Wilcox_wordsonly {
+  width: 80%;
+  padding: 15px;
+  margin: 10px;
+}
+
 /*FOOTER.HTML*/
 footer {
   width: 100%;
-  height: 240px;;
-  margin-top: 100px;
-  border: 5px solid #E6C9BF;
+  height: 200px;;
+  margin-top: 10px;
+  /* border: 5px solid #E6C9BF; */
   border-radius: 5px;
   margin-left: 5px;
   margin-right: 5px;
   margin-bottom: 5px;
-}
-
-#foot {
-  width: 80%;
-  height: 100%;
-  margin: 0 auto;
   display: flex;
   align-items: center;
   flex-direction: column;
+}
+
+#foot {
+  width: 100%;
+  height: 100%;
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
 }
 
 h3 {
@@ -159,11 +212,18 @@ h3 {
 
 div.social {
   text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
 }
 
 a.social {
-  margin-right: 15px;
   text-decoration: none;/*gets rid of those annoying underscores next to social media links*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
 }
 
 span.doublebar {
@@ -181,27 +241,51 @@ div.contact {
   padding-left: 30px;
 }
 
+p.follow_me {
+  margin: 5px;
+  padding: 5px;
+  font-size: 35px;
+  font-family: 'Julius Sans One', sans-serif;
+}
+
 h2#phone_no {
   margin: 10px;
-  font-family: monospace;
+  font-family: Sans;
+  float: left;
+  font-family: 'Julius Sans One', sans-serif;
 }
 
 h2#email {
   margin: 10px;
-  font-family: monospace;
+  font-family: Sans;
+  float: right;
+  font-family: 'Julius Sans One', sans-serif;
 }
 
 img.pinterest {
-  width: 60px;
-  height: 60px;
+  width: 65px;
+  height: 65px;
+  margin: 15px;
 }
 img.facebook {
-  width: 75px;
-  height: 60px;
+  width: 65px;
+  height: 65px;
+  margin: 15px;
 }
 img.instagram {
   width: 65px;
   height: 65px;
+  margin: 15px;
+}
+img.email {
+  width: 65px;
+  height: 65px;
+  margin: 15px;
+}
+img.phone {
+  width: 65px;
+  height: 65px;
+  margin: 15px;
 }
 
 /*PRICING.HTML*/
@@ -227,7 +311,7 @@ p.img_desc {
   display: inline-block;
   margin: auto;
   padding: 15px;
-
+  font-family: 'Quicksand', sans-serif;
 }
 
 .whitetext{
@@ -256,6 +340,14 @@ li..price_item4 {
 
 /*PORTFOLIO.HTML*/
 
+div.portfolio_boxes {
+  width: 800px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+}
+
 div.portfolio_container {
   display: flex;
   flex-wrap: wrap;
@@ -263,35 +355,38 @@ div.portfolio_container {
   justify-content: center;
 }
 
-.makeup-box {
+img.makeup_folder {
   width: 350px;
-  height: 150px;
-  margin: 10px;
-  border: 1px dotted black;
-}
+  height: 310px;
+  margin: 11px;
+};
 
 .hair-box {
   width: 350px;
-  height: 150px;
-  margin: 10px;
-  border: 1px dotted black;
+  height: 350px;
 }
 
-.before-after-box {
+img.hair_folder {
   width: 350px;
-  height: 150px;
-  margin: 10px;
-  border: 1px dotted black;
+  height: 310px;
+  margin: 11px;
 }
 
-.brows-box {
+img.beforeafter_folder {
   width: 350px;
-  height: 150px;
-  margin: 10px;
-  border: 1px dotted black;
+  height: 310px;
+  margin: 11px;
+}
+
+img.brows_folder {
+  width: 350px;
+  height: 310px;
+  margin: 11px;
 }
 
 .questions-box{
+  margin: 20px;
+  padding: 5px;
 
 }
 
@@ -375,6 +470,7 @@ span.checkmark {
   border-right: 1px solid black;
   padding: 30px;
   margin: 10px;
+  font-family: 'Julius Sans One', sans-serif;
 }
 
 .right-column {
@@ -402,12 +498,13 @@ textarea.message {
 }
 
 input.submit {
-  width: 60px;
+  width: 80px;
   height: 25px;
   background-color: white;
   color: black;
   border: 1px solid #E6C9BF;
   border-radius: 6px;
+  font-family: 'Julius Sans One', sans-serif;
 
   transition: all 0.5s;
   transition: 0.5s;
@@ -431,4 +528,18 @@ input.submit:hover {
   background-color: #E6C9BF;
   color: white;
   padding-left: 3px;
+}
+
+.contactpage_box {
+  text-align: center;
+  margin: 5px;
+  font-family: 'Julius Sans One', sans-serif;
+}
+
+.contact_phone {
+  margin: 15px;
+}
+
+.contact_email {
+  margin: 15px;
 }
