@@ -1,7 +1,7 @@
 const express = require('express')
     , bodyParser = require('body-parser')
     , massive = require('massive')
-    // , config = require('./config.js')
+    , config = require('./config.js')
     , controller = require('./serverCtrl.js')
     , cors = require('cors');
              require('dotenv').config();
