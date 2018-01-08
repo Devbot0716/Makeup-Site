@@ -1,7 +1,8 @@
 <div class="images" ui-sref='details({id:image.id})' ng-repeat='image in images'>
-  <img ng-src='{{image.images}}'> <!-- 'ng' needs to be before source because... angular.-->
+  <div class='served_image_box'>
+    <img class='served_image' ng-src='{{image.images}}'> <!-- 'ng' needs to be before source because... angular.-->
+  </div>
 </div>
-
 
 <!-- //ui-sref to details state passing in ID -->
 

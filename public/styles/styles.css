@@ -387,7 +387,27 @@ img.brows_folder {
 .questions-box{
   margin: 20px;
   padding: 5px;
+}
 
+.images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.served_image_box {
+  display: flex;
+  
+  justify-content: center;
+  align-items: center;
+  width: 800px;
+}
+
+.served_image {
+  width: 300px;
+  length: 300px;
+  margin: 5px;
+  padding: 5px;
 }
 
 /*CONTACT.HTML*/
