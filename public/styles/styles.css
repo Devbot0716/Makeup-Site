@@ -1,9 +1,4 @@
 /*HEADER.HTML*/
-* {
-  margin: 0;
-  padding: 0;
-  /* font-family: 'Julius Sans One', sans-serif; */
-}
 
 body {
   margin: 0;
@@ -106,35 +101,38 @@ div.boxes {
   width: 1000px;
 }
 
-img.portfolio {
+.portfolio img {
+  max-width: 100%;
   width: 530px;
-  padding-top: 10px;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding: 3px;
+  margin: 3px;
 }
 
-img.makeup_brushes {
+.makeup_brushes img {
+  max-width: 100%;
   width: 350px;
-  padding-top: 10px;
-  padding-left: 10px;
-  padding-right: 10px;
+  length: 350px;
+  padding: 3px;
+  margin: 3px;
 }
 
 img.bookwithme {
+  max-width: 100%;
   width: 350px;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-bottom: 10px;
+  length: 350px;
+  padding: 3px;
+  margin: 3px;
 }
 
-img.services_and_pricing {
+.services_and_pricing img{
+  max-width: 100%;
   width: 530px;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-bottom: 10px;
+  padding: 3px;
+  margin: 3px;
 }
 
 img.yulia_doing_makeup {
+  max-width: 100%;
   height: 400px;
   width: 400px;
   margin: 10px;
@@ -198,7 +196,7 @@ footer {
 
 #foot {
   width: 100%;
-  height: 100%;
+  height: 140px;
   margin: 5px;
   display: flex;
   align-items: center;
@@ -246,6 +244,9 @@ p.follow_me {
   padding: 5px;
   font-size: 35px;
   font-family: 'Julius Sans One', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 h2#phone_no {
@@ -389,6 +390,7 @@ img.brows_folder {
   padding: 5px;
 }
 
+/*IMAGES.HTML*/
 .images {
   display: flex;
   flex-wrap: wrap;
@@ -397,10 +399,11 @@ img.brows_folder {
 }
 .served_image_box {
   display: flex;
-  
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  width: 800px;
+  width: 100%;
+  height: 100%;
 }
 
 .served_image {
@@ -409,6 +412,53 @@ img.brows_folder {
   margin: 5px;
   padding: 5px;
 }
+
+.back_button_box {
+  width: 100%;
+  length: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+a.back_button {
+  width: 80px;
+  height: 25px;
+  background-color: white;
+  color: gray;
+  border: 1px solid #E6C9BF;
+  border-radius: 6px;
+  font-family: 'Julius Sans One', sans-serif;
+  text-align: center;
+  transition: all 0.5s;
+  transition: 0.5s;
+}
+
+a.back_button:after {
+content: '\00bb';
+position: absolute;
+opacity: 0;
+top: 0;
+right: -20px;
+transition: 0.5s;
+}
+
+a.back_button:hover:after{
+  opacity: 1;
+  right: 0;
+}
+
+a.back_button:hover {
+  background-color: #E6C9BF;
+  color: white;
+  padding-left: 3px;
+  text-decoration: none;
+}
+
+/*REVIEWS.HTML*/
+
+
 
 /*CONTACT.HTML*/
 form.contact {

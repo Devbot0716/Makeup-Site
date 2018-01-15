@@ -3,39 +3,38 @@
   <div class="columns">
 
     <div class="left-column">
-      <form class="contact" name='form' method="post" action='mailto:yulia.wilcox@gmail.com'>
-      <label for="name">Name</label><br>
-      <input class='text' name='name' type='text'/>
-      <br><br>
-      <label for="email">Email</label><br>
-      <input class='text' name='email' type='text'/>
-      <br><br>
-      <label for="phone">Phone</label><br>
-      <input class='text' name='phone' type='text'/>
-      <br><br>
 
-      <h1>I'm interested in:</h1>
-
-      <label class="checkbox_container">Makeup
-        <input type="checkbox">
-        <span class="checkmark"></span>
-      </label>
-      <label class="checkbox_container">Hair
-        <input type="checkbox">
-        <span class="checkmark"></span>
-      </label>
-      <label class="checkbox_container">Brows
-        <input type="checkbox">
-        <span class="checkmark"></span>
-      </label>
-      
-      <br><br>
-
-      <label for="message">Message</label><br>
-      <textarea class='message' name='message'></textarea>
-      <br><br>
-      <input class='submit' name='submit' type='submit' value='Submit'/>
+      <form class="contact" ng-submit='send(USER_EMAIL)'>
+        <label for="name">Name</label>
+        <br>
+        <input class='text' name='name' type='text'/>
+        <br><br>
+        <label for="email">Email</label><br>
+        <input class='text' name='email' type='text'/>
+        <br><br>
+        <label for="phone">Phone</label><br>
+        <input class='text' name='phone' type='text'/>
+        <br><br>
+        <h1>I'm interested in:</h1>
+        <label class="checkbox_container">Makeup
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <label class="checkbox_container">Hair
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <label class="checkbox_container">Brows
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <br><br>
+        <label for="message">Message</label><br>
+        <textarea class='message' name='message'></textarea>
+        <br><br>
+        <input class='submit' name='submit' type='submit' value='Submit'/>
       </form>
+
     </div>
 
     <div class="right-column">
@@ -58,8 +57,5 @@
     </div>
   </div>
 
-  <div class="message-box">
-
-  </div>
   </div>
 </div>

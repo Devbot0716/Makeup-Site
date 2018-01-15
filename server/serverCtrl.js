@@ -1,5 +1,9 @@
+const nodemailer = require('nodemailer');
+ require('dotenv').config();
+
 module.exports = {
-  getAll: (req, res, next) =>{
+  
+  getAll: (req, res, next)=>{
     req.app.get('db').getAll().then((response)=>{
       res.send(response)
     }).catch((err)=>{
@@ -16,12 +20,45 @@ module.exports = {
     })
   },
 
-  getDetails: (req, res, next)=>{
-    console.log(req.params.ID)
-    req.app.get('db').getDetails(req.params.ID).then((response)=>{
-      res.send(response)
-    }).catch((err)=>{
-      console.log(err);
-    })
-  }
+//EMAIL
+  sendEmail (req, res) {
+        console.log('req.body', req.body);
+
+        // create reusable transporter object using the default SMTP transport
+        let transporter = nodemailer.createTransport({
+            service: process.env.NODEMAILER_SERVICE,
+            auth: {
+                user: process.env.USER_EMAIL,
+                pass: process.env.USER_PASS
+            }
+        });
+
+        // setup email data with unicode symbols
+        let mailOptions = {
+            from: `"J 👻" <${process.env.USER_EMAIL}>`, // sender address
+            to: req.body.to, // list of receivers
+            subject: req.body.subject, // Subject line
+            text: 'Making breadsticks', // plain text body
+            html: `<b>${ req.body.body }</b>` // html body
+        };
+
+        // send mail with defined transport object
+        transporter.sendMail(mailOptions, (error, info) => {
+            if (error) {
+                res.send(error)
+            }
+            console.log('Message %s send: %s', info.messageId, info.response);
+            res.status(200).send(info);
+        });
+
+    }
+
+  // getDetails: (req, res, next)=>{
+  //   console.log(req.params.ID)
+  //   req.app.get('db').getDetails(req.params.ID).then((response)=>{
+  //     res.send(response)
+  //   }).catch((err)=>{
+  //     console.log(err);
+  //   })
+  // }
 }
