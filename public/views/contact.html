@@ -1,10 +1,11 @@
 <div class="contact_container">
-
+  <h3>Send me a message here!</h3>
   <div class="columns">
+
 
     <div class="left-column">
 
-      <form class="contact" ng-submit='send(USER_EMAIL)'>
+      <!-- <form class="contact" ng-submit='send(USER_EMAIL)'>
         <label for="name">Name</label>
         <br>
         <input class='text' name='name' type='text'/>
@@ -30,28 +31,51 @@
         </label>
         <br><br>
         <label for="message">Message</label><br>
-        <textarea class='message' name='message'></textarea>
-        <br><br>
-        <input class='submit' name='submit' type='submit' value='Submit'/>
-      </form>
+        <textarea class='message' name='message' ng-model='email.body'></textarea>
+        <br>
+        <button class='submit btn-default' type="submit">Submit</button>
+      </form> -->
+
+      <form class='contact col-sm-4' ng-submit='send(email)'>
+
+        <!-- <input class="form-control " ng-model='email.to' ><br> -->
+        <!-- <p>Subject:</p>
+        <input class="form-control" ng-model='email.subject' > <br> -->
+        <h1>Tell me what you're interested in:</h1>
+        <label class="checkbox_container">Makeup
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <label class="checkbox_container">Hair
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <label class="checkbox_container">Brows
+          <input type="checkbox">
+          <span class="checkmark"></span>
+        </label>
+        <h4>Please include your email, phone number and any questions you have in the box below:</h4>
+        <textarea class="message" ng-model='email.body' ></textarea> <br>
+        <button class='submit btn-default' type="submit">Submit</button>
+    </form>
 
     </div>
 
     <div class="right-column">
       <div class="contactpage_box">
-        <h2 class='contact_phone'>(385)207-0534</h2>
-        <h2 class='contact_email'>yulia.wilcox@gmail.com</h2>
+        <h3 class='contact_phone'>(385)207-0534</h3>
+        <h3 class='contact_email'>yulia.wilcox@gmail.com</h3>
       </div>
 
       <div>
         <a class='social pinterest' href='https://www.pinterest.com/juliazinnikova/' target="_blank">
-          <img src="/images/Pinterest_256.png" class="pinterest">
+          <img src="/images/Pinterest_256.png" class="pinterest">Follow me on pinterest! (Julia Zinnikova)
         </a>
         <a class='social facebook' href='https://www.facebook.com/hairmuabyyulia/' target="_blank">
-          <img src="/images/Facebook_256.png" class="facebook">
+          <img src="/images/Facebook_256.png" class="facebook">Yulia Wilcox - Makeup & Hair Style - Utah
         </a>
-        <a class='social instagram' href='https://www.instagram.com/hair_by_yulia/' target="_blank">
-          <img src="/images/Instagram_256.png" class="instagram">
+        <a class='social instagram' href='https://www.instagram.com/yulia_wilcox_pro/' target="_blank">
+          <img src="/images/Instagram_256.png" class="instagram">  Follow more of my work @yulia_wilcox_pro!
         </a>
       </div>
     </div>

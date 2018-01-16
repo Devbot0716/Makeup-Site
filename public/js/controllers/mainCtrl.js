@@ -10,4 +10,14 @@ angular.module('app')
 
     $scope.recieveInfo();
 
+    $scope.send = function(email){
+      mainSvc.send(email)
+    }
+
+    $scope.email = {
+        to: 'yulia.zinnikova@gmail.com',
+        subject: 'New Client',
+        body: ''
+    }
+
   })

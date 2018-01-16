@@ -537,13 +537,14 @@ span.checkmark {
 
 .left-column {
   float: left;
-  border-right: 1px solid black;
+  border-right: 2px solid gray;
   padding: 30px;
   margin: 10px;
   font-family: 'Julius Sans One', sans-serif;
 }
 
 .right-column {
+  border-left: 2px solid gray;
   float: right;
   padding: 30px;
   margin: 10px;
@@ -567,8 +568,8 @@ textarea.message {
   border: 1px solid #d8d8d8;
 }
 
-input.submit {
-  width: 80px;
+button.submit {
+  width: 100px;
   height: 25px;
   background-color: white;
   color: black;
@@ -580,21 +581,21 @@ input.submit {
   transition: 0.5s;
 }
 
-input.submit:after {
+ button.submit:after {
   content: '\00bb';
-  position: absolute;
+  /*position: absolute;*/
   opacity: 0;
   top: 0;
   right: -20px;
   transition: 0.5s;
 }
 
-input.submit:hover:after{
+button.submit:hover:after{
   opacity: 1;
   right: 0;
 }
 
-input.submit:hover {
+button.submit:hover {
   background-color: #E6C9BF;
   color: white;
   padding-left: 3px;

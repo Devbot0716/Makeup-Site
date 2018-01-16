@@ -1,8 +1,9 @@
+'use strict';
 const nodemailer = require('nodemailer');
  require('dotenv').config();
 
 module.exports = {
-  
+
   getAll: (req, res, next)=>{
     req.app.get('db').getAll().then((response)=>{
       res.send(response)
@@ -26,17 +27,17 @@ module.exports = {
 
         // create reusable transporter object using the default SMTP transport
         let transporter = nodemailer.createTransport({
-            service: process.env.NODEMAILER_SERVICE,
+            service: process.env.SERVICE,
             auth: {
-                user: process.env.USER_EMAIL,
-                pass: process.env.USER_PASS
+                user: process.env.ADMIN_EMAIL,
+                pass: process.env.ADMIN_PASS
             }
         });
 
         // setup email data with unicode symbols
         let mailOptions = {
-            from: `"J 👻" <${process.env.USER_EMAIL}>`, // sender address
-            to: req.body.to, // list of receivers
+            from: `"New Client" <${process.env.ADMIN_EMAIL}>`, // sender address
+            to: process.env.ADMIN_EMAIL, // list of receivers
             subject: req.body.subject, // Subject line
             text: 'Making breadsticks', // plain text body
             html: `<b>${ req.body.body }</b>` // html body
