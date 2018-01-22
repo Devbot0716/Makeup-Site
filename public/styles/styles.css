@@ -4,6 +4,7 @@ body {
   margin: 0;
   font-family: sans-serif;
   font-weight: 400;
+
 /* width: 100%;
   height: 100%;
   min-width: 1000px;
@@ -218,6 +219,7 @@ div.social {
 
 a.social {
   text-decoration: none;/*gets rid of those annoying underscores next to social media links*/
+  color: black;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -385,6 +387,21 @@ img.brows_folder {
   margin: 11px;
 }
 
+.portfolio_title{
+  /* top: 200px;
+  left: 0; */
+  /* width: 100%; */
+}
+
+.portfolio_title span {
+  /* color: white;
+   font: bold 24px/45px Helvetica, Sans-Serif;
+   /* letter-spacing: -1px;
+   background: rgb(0, 0, 0);  fallback color
+   background: rgba(0, 0, 0, 0.7);
+   padding: 3px; */
+}
+
 .questions-box{
   margin: 20px;
   padding: 5px;
@@ -457,6 +474,62 @@ a.back_button:hover {
 }
 
 /*REVIEWS.HTML*/
+.reviews-header {
+  text-align: center;
+}
+
+.reviews {
+  /* background-color: #EBBCBC; */
+  /* border-style: solid;
+  border-radius: 5px; */
+  box-shadow: 5px 5px 5px #888;
+  font-family: sans-serif;
+}
+
+.user1 {
+  text-transform: capitalize;
+}
+
+.user2 {
+  text-transform: capitalize;
+}
+
+.user3 {
+  text-transform: capitalize;
+}
+
+.user1_pic {
+  border-style: groove;
+}
+
+.user2_pic {
+  border-style: groove;
+}
+
+.user3_pic {
+  border-style: groove;
+}
+
+.user1_box {
+  border-style: ridge;
+  background-color: white;
+  box-shadow: 3px 3px 3px #888;
+  padding: 10px;
+}
+
+.user2_box {
+  border-style: ridge;
+  background-color: white;
+  box-shadow: 3px 3px 3px #888;
+  padding: 10px;
+}
+
+.user3_box {
+  border-style: ridge;
+  background-color: white;
+  box-shadow: 3px 3px 3px #888;
+  padding: 10px;
+}
 
 
 
@@ -520,6 +593,12 @@ span.checkmark {
     transform: rotate(45deg);
 }
 
+.contact_header{
+  text-align: center;
+  width: 100%;
+  font-family: 'Julius Sans One', sans-serif;
+}
+
 .contact_container {
   display: flex;
   flex-wrap: wrap;
@@ -537,14 +616,15 @@ span.checkmark {
 
 .left-column {
   float: left;
-  border-right: 2px solid gray;
+  border-right: 2px solid #D2D2D2;
   padding: 30px;
   margin: 10px;
   font-family: 'Julius Sans One', sans-serif;
+  width: 429px;
 }
 
 .right-column {
-  border-left: 2px solid gray;
+  border-left: 2px solid #D2D2D2;
   float: right;
   padding: 30px;
   margin: 10px;

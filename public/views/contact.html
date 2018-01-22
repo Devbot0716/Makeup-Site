@@ -1,8 +1,7 @@
+<h3 class='contact_header'>Send me a message here!</h3>
 <div class="contact_container">
-  <h3>Send me a message here!</h3>
+
   <div class="columns">
-
-
     <div class="left-column">
 
       <!-- <form class="contact" ng-submit='send(USER_EMAIL)'>
@@ -42,7 +41,7 @@
         <!-- <p>Subject:</p>
         <input class="form-control" ng-model='email.subject' > <br> -->
         <h1>Tell me what you're interested in:</h1>
-        <label class="checkbox_container">Makeup
+        <label class="checkbox_container" checked>Makeup
           <input type="checkbox">
           <span class="checkmark"></span>
         </label>
@@ -54,8 +53,8 @@
           <input type="checkbox">
           <span class="checkmark"></span>
         </label>
-        <h4>Please include your email, phone number and any questions you have in the box below:</h4>
-        <textarea class="message" ng-model='email.body' ></textarea> <br>
+        <h4>Please include an email, phone # and any questions you have in the box below:</h4>
+        <textarea class="message" ng-model='email.body' required></textarea> <br>
         <button class='submit btn-default' type="submit">Submit</button>
     </form>
 

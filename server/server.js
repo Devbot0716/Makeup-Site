@@ -9,7 +9,7 @@ const express = require('express')
 const app = express();
 
 app.use(bodyParser.json());
-app.use(express.static('./public')); //serves front end
+app.use(express.static( './public')); //serves front end
 app.use(cors());
 massive(process.env.CONNECTION_STRING).then(db =>{
    app.set('db', db)}).catch((err)=>console.log(err));
@@ -17,14 +17,16 @@ massive(process.env.CONNECTION_STRING).then(db =>{
 
 
 //ENDPOINTS
-app.get('/', function(req, res){
-    res.sendFile(__dirname + '/index.html');
-});
+// app.get('/', function(req, res){
+//     res.sendFile(__dirname + '/index.html');
+// });
 app.get('/getAll', controller.getAll);
 // app.get('/getDetails/:ID', controller.getDetails);
 app.get('/getImages/:Type', controller.getImages);
 
 app.post('/api/send_email', controller.sendEmail);
+
+
 
 const port = process.env.PORT || 3000;
 app.listen(port, ( ) => {
